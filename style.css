@@ -1,0 +1,231 @@
+/* ---- VARIÁVEIS DE CORES E CONFIGURAÇÕES GLOBAIS ---- */
+:root {
+    --light-blue: #A0D2EB; /* Azul claro principal */
+    --medium-blue: #8EC1DE;
+    --gray: #8D99AE;       /* Cinza para textos secundários */
+    --dark-gray: #2B2D42;  /* Cinza escuro para títulos e textos principais */
+    --white: #FFFFFF;      /* Branco */
+    --light-bg: #F8F9FA;   /* Fundo levemente acinzentado para seções alternadas */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+    color: var(--dark-gray);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    color: var(--dark-gray);
+    margin-bottom: 40px;
+}
+
+p {
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+/* ---- CABEÇALHO / HERO ---- */
+.hero {
+    background-color: var(--white);
+    text-align: center;
+    padding: 80px 20px 60px;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid var(--light-blue);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    color: var(--gray);
+    font-weight: 400;
+    margin: 0;
+}
+
+.hero .location {
+    font-size: 1rem;
+    color: var(--gray);
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+/* ---- SEÇÃO SOBRE ---- */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.office-pic {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- SEÇÃO SERVIÇOS ---- */
+.bg-light {
+    background-color: var(--light-bg);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.service-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 5px solid var(--light-blue);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    color: var(--dark-gray);
+    font-size: 1.4rem;
+}
+
+/* ---- SEÇÃO CONTATO ---- */
+#contato {
+    text-align: center;
+}
+
+#contato p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 250px;
+    max-width: 100%;
+}
+
+.contact-button i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-button.whatsapp {
+    background-color: var(--light-blue);
+    color: var(--dark-gray);
+}
+
+.contact-button.whatsapp:hover {
+    background-color: var(--medium-blue);
+    transform: translateY(-3px);
+}
+
+.contact-button.email {
+    background-color: var(--gray);
+    color: var(--white);
+}
+
+.contact-button.email:hover {
+    background-color: var(--dark-gray);
+    transform: translateY(-3px);
+}
+
+/* ---- RODAPÉ ---- */
+.footer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+
+/* ---- RESPONSIVIDADE (PARA TABLETS E DESKTOPS) ---- */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .about-content {
+        flex-direction: row; /* Coloca texto e imagem lado a lado */
+        text-align: left;
+    }
+
+    .services-grid {
+        /* Cria um grid com colunas que se ajustam automaticamente */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .contact-links {
+        flex-direction: row; /* Botões de contato lado a lado */
+        justify-content: center;
+        gap: 20px;
+    }
+}
