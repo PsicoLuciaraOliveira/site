@@ -61,20 +61,10 @@ p {
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
-    max-width: 90vw;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 100%;
+    max-width: 600px; /* Tamanho máximo da imagem */
+    height: auto;
     margin-bottom: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-@media (min-width: 768px) {
-    .profile-pic {
-        width: 180px;
-        height: 180px;
-    }
 }
 
 .hero .subtitle {
