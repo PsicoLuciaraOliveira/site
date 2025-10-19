@@ -63,6 +63,7 @@ p {
 .profile-pic {
     width: 180px;
     height: 180px;
+    max-width: 90vw;
     border-radius: 50%;
     object-fit: cover;
     border: 6px solid var(--light-blue);
